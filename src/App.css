@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'joystix';
+  src: url("/src/assets/joystix monospace.otf");
+}
+
+
+.configImg {
+  aspect-ratio: 1/1;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.button {
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  border-Radius: 8px;
+  box-Shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-Direction: column;
+  align-Items: center;
+}
+
+.buttonText {
+  font-Size: 14px;
+  font-Weight: bold;
+  color: black;
+  margin-top: 5px;
+  font-family: Roboto Slab;
+}
+
+.div-container {
+  display: flex;
+}
+
+.div-general {
+  min-height: 100vh;
+  background-image: url("https://i.imgur.com/o1kYaG9.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.img-container {
+  width: auto;
+  height: 100px;
+  filter: drop-shadow(0 0 20px lightblue)
+}
+
+.h2-container {
+  font-size: 50px;
+  font-family: 'joystix';
+
+}
+
+.score-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+}
+
+.fondo-container {
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  color: white;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+  gap: 15px;
+}
+
+.x-container {
+  font-size: 20px;
+}
+
+.h1-container {
+  font-size: 60px;
+
+}
+
+.h3-container {
+  font-size: 30px;
+}
+
+.q-container {
+  font-size: 20px;
+}
+
+.buttonCorrect {
+  background-color: green;
+  transition: all 1s;
+}
+
+#dialogModal {
+  padding: 200px;
+  background: url("https://i.pinimg.com/736x/01/a4/aa/01a4aa0ed5141a544bf846b9baeac8cd.jpg"), url("https://i.pinimg.com/736x/01/a4/aa/01a4aa0ed5141a544bf846b9baeac8cd.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  min-width: 180px;
+  text-align: center;
+  color: white;
+  background-blend-mode: multiply;
+
+}
+
+#dialogModal p {
+  margin-bottom: 20px;
+  font-family: 'joystix';
+  font-size: 65px;
+}
+
+#dialogModal button {
+  padding: 10px 20px;
+  background-color: #afa84c;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#dialogModal::backdrop {
+  background: rgba(0, 0, 0, 0.788);
+}
