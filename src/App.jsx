@@ -1,6 +1,7 @@
 import './App.css';
 import { useFetch } from './useFetch';
 import { useState, useEffect } from 'react';
+import metanfetamina from '/src/assets/meta.png';
 
 // falta arreglar lo del loading
 
@@ -143,7 +144,7 @@ function App() {
             </span>
             <span>{score}</span>
           </h2>
-          <img className='img-container' src="/src/assets/meta.png" alt="meta" />
+          <img className='img-container' src={metanfetamina} alt="meta" />
         </div>
 
       </div>
