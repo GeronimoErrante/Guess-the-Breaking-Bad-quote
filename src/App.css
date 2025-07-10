@@ -34,6 +34,11 @@
 
 .div-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  padding: 0 20px;
 }
 
 .div-general {
@@ -41,12 +46,14 @@
   background-image: url("https://i.imgur.com/o1kYaG9.gif");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: space-around;
+  padding: 20px 0;
 }
 
 body {
@@ -63,7 +70,6 @@ body {
 .h2-container {
   font-size: 50px;
   font-family: 'joystix';
-
 }
 
 .score-container {
@@ -71,6 +77,7 @@ body {
   width: 100%;
   align-items: center;
   justify-content: end;
+  padding: 0 20px;
 }
 
 .fondo-container {
@@ -89,15 +96,20 @@ body {
 
 .h1-container {
   font-size: 60px;
-
+  margin: 0;
+  padding: 0 20px;
 }
 
 .h3-container {
   font-size: 30px;
+  margin: 10px 0;
 }
 
 .q-container {
   font-size: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+  line-height: 1.4;
 }
 
 .buttonCorrect {
@@ -116,7 +128,6 @@ body {
   text-align: center;
   color: white;
   background-blend-mode: multiply;
-
 }
 
 #dialogModal p {
@@ -140,4 +151,227 @@ body {
 
 #dialogModal::backdrop {
   background: rgba(0, 0, 0, 0.788);
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+  .configImg {
+    height: 250px;
+    width: 250px;
+  }
+  
+  .h1-container {
+    font-size: 50px;
+  }
+  
+  .h2-container {
+    font-size: 40px;
+  }
+  
+  .h3-container {
+    font-size: 25px;
+  }
+  
+  .q-container {
+    font-size: 18px;
+  }
+  
+  .div-container {
+    gap: 15px;
+  }
+  
+  .button {
+    margin: 3px;
+    padding: 8px;
+  }
+  
+  .buttonText {
+    font-size: 12px;
+  }
+}
+
+/* Responsive Design - Mobile Large */
+@media (max-width: 768px) {
+  .configImg {
+    height: 200px;
+    width: 200px;
+  }
+  
+  .h1-container {
+    font-size: 40px;
+  }
+  
+  .h2-container {
+    font-size: 35px;
+  }
+  
+  .h3-container {
+    font-size: 22px;
+  }
+  
+  .q-container {
+    font-size: 16px;
+    max-width: 95%;
+  }
+  
+  .div-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .button {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+  }
+  
+  .buttonText {
+    font-size: 14px;
+  }
+  
+  .score-container {
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .fondo-container {
+    border-radius: 50px;
+    padding: 0 1.5em;
+  }
+  
+  .img-container {
+    height: 80px;
+  }
+  
+  #dialogModal {
+    padding: 100px 50px;
+    margin: 20px;
+  }
+  
+  #dialogModal p {
+    font-size: 40px;
+  }
+  
+  #dialogModal button {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 480px) {
+  .configImg {
+    height: 150px;
+    width: 150px;
+  }
+  
+  .h1-container {
+    font-size: 30px;
+  }
+  
+  .h2-container {
+    font-size: 25px;
+  }
+  
+  .h3-container {
+    font-size: 18px;
+  }
+  
+  .q-container {
+    font-size: 14px;
+  }
+  
+  .div-general {
+    padding: 10px 0;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  
+  .button {
+    max-width: 250px;
+  }
+  
+  .buttonText {
+    font-size: 12px;
+  }
+  
+  .img-container {
+    height: 60px;
+  }
+  
+  .x-container {
+    font-size: 16px;
+  }
+  
+  #dialogModal {
+    padding: 80px 30px;
+  }
+  
+  #dialogModal p {
+    font-size: 30px;
+  }
+  
+  #dialogModal button {
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive Design - Extra Small Mobile */
+@media (max-width: 360px) {
+  .configImg {
+    height: 120px;
+    width: 120px;
+  }
+  
+  .h1-container {
+    font-size: 25px;
+  }
+  
+  .h2-container {
+    font-size: 20px;
+  }
+  
+  .h3-container {
+    font-size: 16px;
+  }
+  
+  .q-container {
+    font-size: 12px;
+  }
+  
+  .button {
+    max-width: 200px;
+    padding: 5px;
+  }
+  
+  .buttonText {
+    font-size: 10px;
+  }
+  
+  .img-container {
+    height: 50px;
+  }
+  
+  .fondo-container {
+    padding: 0 1em;
+    gap: 10px;
+  }
+  
+  #dialogModal {
+    padding: 60px 20px;
+  }
+  
+  #dialogModal p {
+    font-size: 25px;
+  }
+  
+  #dialogModal button {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+  }
 }
