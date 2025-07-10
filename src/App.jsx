@@ -11,6 +11,7 @@ function App() {
   const [options, setOptions] = useState([]);
   const [correctOption, setCorrectOption] = useState(null);
   const [score, setScore] = useState(0);
+  const [showPlusOne, setShowPlusOne] = useState(false);
 
   useEffect(() => {
     if (!loading && data && data.length > 0) {
@@ -75,6 +76,7 @@ function App() {
         button = event.target;
       }
       button.classList.add("buttonCorrect")
+      setShowPlusOne(true);
       setTimeout(() => {
         setScore(score + 1)
         setLoading(true);
@@ -84,6 +86,7 @@ function App() {
           .finally(() => {
             setLoading(false)
             button.classList.remove("buttonCorrect")
+            setShowPlusOne(false);
           }
           );
       }, 1000)
@@ -122,7 +125,11 @@ function App() {
         </span>
       </div>
       <div className='div-container'>
-        {loading && <h2>Loading...</h2>}
+        {loading && (
+          <div className="loading-container">
+            <img className="loading-spinner" src={metanfetamina} alt="Loading..." />
+          </div>
+        )}
         {options &&
           options.map((author, index) => {
             const character = personajes.find(pj => pj.nombre === author);
@@ -145,6 +152,7 @@ function App() {
             <span>{score}</span>
           </h2>
           <img className='img-container' src={metanfetamina} alt="meta" />
+          {showPlusOne && <div className='plus-one'>+1</div>}
         </div>
 
       </div>
